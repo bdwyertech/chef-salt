@@ -38,7 +38,7 @@ end
 execute 'wait for salt-master' do
   command 'sleep 5'
   action :nothing
-  notifies :reload, 'ohai_plugin[salt]', :immediate
+  notifies :reload, 'ohai[salt]', :immediate
 end
 
 if Chef::Config[:solo]
