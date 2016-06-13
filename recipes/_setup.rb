@@ -16,6 +16,10 @@ ohai_plugin 'salt' do
   source_file 'salt_plugin.rb'
 end
 
+ohai 'salt' do
+  action :nothing
+end
+
 case node['platform_family']
 when 'debian'
   include_recipe 'apt'
